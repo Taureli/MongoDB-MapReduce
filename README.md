@@ -27,8 +27,15 @@ Rozdziela on wszystkie słowa na litery, które po alfabetycznym posortowaniu s�
 
 #Zadanie 2
 
-#Przygotowanie
+###Przygotowanie
 
-Pierwszą rzeczą, jaką wykonałem była konwersja pliku xml na csv, aby móc go wgrać do bazy Mongo. Przy okazji "oczyściłem" teksty z niepotrzebnych znaków, zostawiając jedynie litery i cyfry.
+Pierwszą rzeczą, jaką wykonałem była konwersja pliku xml na csv, aby móc go wgrać do bazy Mongo. Przy okazji wyciąłem wszystkie dane, poza zawartością znaczników <text> oraz "oczyściłem" teksty z niepotrzebnych znaków, zostawiając jedynie litery i cyfry.
 
-######Operacja konwersji zajęła 17 minut
+######Czas wykonania operacji konwersji: 17 minut
+
+Następnym krokiem jest zaimportowanie danych z pliku do bazy. Wykorzystałem do tego polecenie:
+```
+time mongoimport --type csv -c Wiki --file gotowe.csv --headerline
+```
+
+######Czas wykonania operacji: 7 minut 35 sekund
