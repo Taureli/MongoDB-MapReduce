@@ -26,3 +26,9 @@ Rozdziela on wszystkie słowa na litery, które po alfabetycznym posortowaniu s�
 ######Dla naszej bazy danych skrypt znalazł 914 anagramów w czasie 0,716 sekundy.
 
 #Zadanie 2
+
+#Przygotowanie
+
+Pierwszą rzeczą, jaką wykonałem była konwersja pliku xml na csv, aby móc go wgrać do bazy Mongo. Przy okazji "oczyściłem" teksty z niepotrzebnych znaków, zostawiając jedynie litery i cyfry.
+
+######Operacja konwersji zajęła 17 minut
