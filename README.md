@@ -15,27 +15,35 @@ Następnie zimportowałem wszystkie słowa z pliku do bazy MongoDB za pomocą po
 time mongoimport --type csv -c Words --file word_list.txt --headerline
 ```
 
-######Czas wykonania operacji: 0,758 sekundy.
+#####Czas wykonania operacji: 0,758 sekundy.
 
 ###Szukanie anagramów
 
-Do znalezienia anagramów napisałem [skrypt w języku JavaScript](Zad1.js).
+Do znalezienia anagramów napisałem [skrypt w języku JavaScript](Zad1.js), uruchamiany poleceniem:
+```
+time mongo test Zad1.js
+```
 
 Rozdziela on wszystkie słowa na litery, które po alfabetycznym posortowaniu są emitowanew funckji Map. Jeśli zostaną wyemitowane przynajmniej 2 takie same zestawy liter, oznacza to, że znaleziono anagram.
 
-######Dla naszej bazy danych skrypt znalazł 914 anagramów w czasie 0,716 sekundy.
+#####Dla naszej bazy danych skrypt znalazł 914 anagramów w czasie 0,716 sekundy.
 
 #Zadanie 2
 
 ###Przygotowanie
 
-Pierwszą rzeczą, jaką wykonałem była konwersja pliku xml na csv, aby móc go wgrać do bazy Mongo. Przy okazji wyciąłem wszystkie dane, poza zawartością znaczników <text> oraz "oczyściłem" teksty z niepotrzebnych znaków, zostawiając jedynie litery i cyfry.
+Pierwszą rzeczą, jaką wykonałem była konwersja pliku xml na csv, aby móc go wgrać do bazy Mongo. Przy okazji wyciąłem wszystkie dane, poza zawartością znaczników <text> oraz "oczyściłem" teksty z niepotrzebnych znaków, zostawiając jedynie litery.
 
-######Czas wykonania operacji konwersji: 17 minut
+Wykorzystałem w tym celu skrypt napisany przy użyciu Node, uruchamiany poleceniem:
+```
+node konwerter.js
+```
+
+#####Czas wykonania operacji konwersji: 17 minut
 
 Następnym krokiem jest zaimportowanie danych z pliku do bazy. Wykorzystałem do tego polecenie:
 ```
 time mongoimport --type csv -c Wiki --file gotowe.csv --headerline
 ```
 
-######Czas wykonania operacji: 7 minut 35 sekund
+#####Czas wykonania operacji: 7 minut 35 sekund
