@@ -34,7 +34,7 @@ Rozdziela on wszystkie słowa na litery, które po alfabetycznym posortowaniu s�
 
 Pierwszą rzeczą, jaką wykonałem była konwersja pliku xml na csv, aby móc go wgrać do bazy Mongo. Przy okazji wyciąłem wszystkie dane, poza zawartością znaczników <text> oraz "oczyściłem" teksty z niepotrzebnych znaków, zostawiając jedynie litery.
 
-Wykorzystałem w tym celu skrypt napisany przy użyciu Node, uruchamiany poleceniem:
+Wykorzystałem w tym celu [skrypt napisany przy użyciu Node](konwerter.js), uruchamiany poleceniem:
 ```
 node konwerter.js
 ```
