@@ -47,3 +47,36 @@ time mongoimport --type csv -c Wiki --file gotowe.csv --headerline
 ```
 
 #####Czas wykonania operacji: 7 minut 35 sekund
+
+###MapReduce
+
+Następnie uruchomiłem operację MapReduce, przy użyciu [skryptu w JavaScripcie](Zad2.js), wpisujac polecenie:
+```
+time mongo test Zad2.js
+```
+
+Zlicza on ilość wystapien kazdego wyrazu i zapisanie tej wartosci jako 'value' w bazie danych.
+
+#####Czas wykonania operacji: 12 godzin 26 minut
+
+###Zliczanie wyrazów
+
+Aby wypisac najczesciej pojawiajace sie slowa, uzylem ponizszej komendy w programie Robomongo:
+```
+db.Wiki2.find().sort( { "value": -1 } ).limit(10);
+```
+
+W wyniku dostalem takie oto dane:
+
+```
+urodził : 5382
+sześć" : 5352
+Urodził : 5342
+ukończeniu : 5307
+Dwa : 5261
+rodzinie : 5261
+przebywał : 5254
+założył : 5246
+pozostał : 5234
+powrocie : 5229
+```
